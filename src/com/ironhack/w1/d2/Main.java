@@ -105,7 +105,30 @@ public class Main {
         System.out.println((int) 3.75); // El casteo se queda con la parte entera
         System.out.println(Math.ceil(3.75));
 
+        // CFU: Loops
 
+        // #1
+
+        int[] numbers3 = {5, 4, 3, 2, 1};
+        System.out.println(Arrays.toString(numbers3));
+
+        int[] originalNumbers = numbers3.clone();
+
+        for (int i = 0; i < numbers3.length; i++) {
+            int nextIndex = (i + 1) % numbers3.length;
+            numbers3[i] = originalNumbers[i] * originalNumbers[nextIndex];
+            System.out.println(numbers3[i]);
+        }
+
+        // #2
+
+        int[] numbers4 = {1, 2, 3, 4, 5};
+
+        int[] invertedNumbers = new int[numbers4.length];
+        for (int i = 0; i < numbers4.length; i++) {
+            invertedNumbers[i] = numbers4[numbers4.length - 1 - i];
+            System.out.println(invertedNumbers[i]);
+        }
 
     }
 
